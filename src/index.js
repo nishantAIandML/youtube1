@@ -1,12 +1,13 @@
 import dotenv from "dotenv";
 import connectDB from "./db/db.js";
-import express from "express";
+// import express from "express";
+import app from "./app.js";
 
 dotenv.config({
   path: "./env",
 });
 
-const app=express();
+// const app=express();
 connectDB()
   .then(() => {
     app.listen(process.env.PORT, () => {
@@ -18,6 +19,8 @@ connectDB()
     process.exit(1);
   });
 
+
+//
 /*import express from "express";
 const app = express();
 dotenv.config();
